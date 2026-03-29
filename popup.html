@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="pl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ozzilb-browser-preview</title>
+    <style>
+      body {
+        font: 13px/1.4 system-ui, sans-serif;
+        margin: 0;
+        padding: 12px;
+        min-width: 280px;
+        color: #0f172a;
+      }
+      label {
+        display: block;
+        margin-top: 8px;
+        font-weight: 600;
+      }
+      input {
+        width: 100%;
+        box-sizing: border-box;
+        margin-top: 4px;
+        padding: 6px 8px;
+        border: 1px solid #cbd5e1;
+        border-radius: 6px;
+      }
+      button {
+        margin-top: 12px;
+        width: 100%;
+        padding: 8px 10px;
+        border: 0;
+        border-radius: 8px;
+        background: #2563eb;
+        color: #fff;
+        font-weight: 600;
+        cursor: pointer;
+      }
+      button.secondary {
+        background: #334155;
+        margin-top: 8px;
+      }
+      p.hint {
+        margin: 8px 0 0;
+        color: #64748b;
+        font-size: 12px;
+      }
+    </style>
+  </head>
+  <body>
+    <strong>ozzilb-browser-preview</strong>
+    <p class="hint">
+      Uruchom lokalny mostek HTTP (np. serwer MCP w Cursorze). Domyślnie
+      <code>http://127.0.0.1:17373</code>. Szczegóły w README repozytorium.
+    </p>
+    <label for="bridgeBase">Adres mostka (bez /v1/capture)</label>
+    <input id="bridgeBase" type="text" placeholder="http://127.0.0.1:17373" autocomplete="off" />
+    <label for="previewToken">Token (opcjonalnie, nagłówek X-Preview-Token)</label>
+    <input id="previewToken" type="password" autocomplete="off" />
+    <button id="save" class="secondary">Zapisz ustawienia</button>
+    <button id="pick">Wybierz element na tej karcie</button>
+    <p class="hint">Skrót: Alt+Shift+C (chrome://extensions/shortcuts → ozzilb-browser-preview)</p>
+    <script src="popup.js"></script>
+  </body>
+</html>

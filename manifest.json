@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "ozzilb-browser-preview",
+  "version": "0.1.0",
+  "description": "Wysyła wybrany element DOM na lokalny mostek HTTP dla Cursor (MCP) — podgląd jak Windsurf Preview.",
+  "permissions": ["activeTab", "scripting", "storage", "contextMenus"],
+  "host_permissions": ["<all_urls>"],
+  "action": {
+    "default_title": "ozzilb-browser-preview",
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "commands": {
+    "bpp-start-pick": {
+      "suggested_key": {
+        "default": "Alt+Shift+C",
+        "mac": "Alt+Shift+C"
+      },
+      "description": "Rozpocznij wybór elementu do Cursor"
+    }
+  }
+}
