@@ -1,5 +1,11 @@
 # ozzilb-browser-preview
 
+**Repozytorium GitHub:** [github.com/nubis-nice/ozzilab-curosr-preview](https://github.com/nubis-nice/ozzilab-curosr-preview)
+
+```bash
+git clone https://github.com/nubis-nice/ozzilab-curosr-preview.git
+```
+
 Rozszerzenie **Chrome / Edge (Chromium)** do pracy z [Cursor](https://cursor.com) w stylu **Windsurf Preview**: wybierasz element na stronie w zwykłej przeglądarce, a dane trafiają na **lokalny mostek HTTP**, skąd agent AI (MCP) może je odczytać i proponować zmiany w kodzie frontendu / backendu.
 
 ## Wymagania
@@ -42,6 +48,17 @@ Treść: JSON z polem `schemaVersion: 1` oraz m.in. `pageUrl`, `tagName`, `outer
 ## Bezpieczeństwo
 
 Rozszerzenie ma szerokie uprawnienia (`<all_urls>`) — nadaje się do **środowiska developerskiego**. Nie publikuj w Chrome Web Store bez osobnego audytu i polityki prywatności.
+
+## Repozytorium Git
+
+Oficjalny remote: **https://github.com/nubis-nice/ozzilab-curosr-preview** — wypchnięcie zmian (po sklonowaniu u siebie):
+
+```powershell
+cd F:\.cursor\ozzilb-browser-preview
+.\scripts\push.ps1 "https://github.com/nubis-nice/ozzilab-curosr-preview.git"
+```
+
+Szczegóły: **`GITHUB.md`**.
 
 ## Licencja
 
